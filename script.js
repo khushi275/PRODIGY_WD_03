@@ -1,11 +1,10 @@
 const board = document.getElementById("game-board");
 const resetButton = document.getElementById("reset-btn");
 let currentPlayer = 'X'; // X always starts
-let gameState = ['', '', '', '', '', '', '', '', '']; // 9 spots on the board
+let gameState = ['', '', '', '', '', '', '', '', ''];
 
-// Create the 9 cells
 function createBoard() {
-  board.innerHTML = ''; // Clear the board
+  board.innerHTML = '';
   gameState.forEach((cell, index) => {
     const cellElement = document.createElement("div");
     cellElement.setAttribute('data-index', index);
@@ -15,7 +14,6 @@ function createBoard() {
   });
 }
 
-// Handle cell click
 function handleCellClick(event) {
   const index = event.target.getAttribute('data-index');
   if (gameState[index] === '') {
@@ -25,11 +23,10 @@ function handleCellClick(event) {
       alert(`${currentPlayer} wins!`);
       return;
     }
-    currentPlayer = currentPlayer === 'X' ? 'O' : 'X'; // Switch player
+    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
   }
 }
 
-// Check for a winner
 function checkWinner() {
   const winPatterns = [
     [0, 1, 2],
@@ -51,7 +48,6 @@ function checkWinner() {
   return false;
 }
 
-// Reset the game
 function resetGame() {
   gameState = ['', '', '', '', '', '', '', '', ''];
   currentPlayer = 'X';
@@ -60,5 +56,4 @@ function resetGame() {
 
 resetButton.addEventListener('click', resetGame);
 
-// Initialize the game
 createBoard();
