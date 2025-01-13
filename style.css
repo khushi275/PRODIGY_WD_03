@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #6e7e91, #304352);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #222; /* Darker text color */
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .game-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    color: #eaeaea; /* Lighter shade for the title */
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .board div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #d1d9e6;
+    border-radius: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    height: 100px;
+    color: #222; /* Darker text color for the cells */
+  }
+  
+  .board div:hover {
+    background: #aab7d4;
+    transform: scale(1.05);
+  }
+  
+  button {
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #6e7e91, #304352);
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background: #4a5d6d;
+    transform: scale(1.05);
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 500px) {
+    .game-container {
+      padding: 25px;
+      max-width: 300px;
+    }
+  
+    .board {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 8px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    button {
+      font-size: 1rem;
+    }
+  }
+  
