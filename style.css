@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #222; /* Darker text color */
+    color: #222;
     text-align: center;
     padding: 20px;
   }
@@ -30,7 +30,7 @@
     font-size: 2.5rem;
     margin-bottom: 20px;
     letter-spacing: 2px;
-    color: #eaeaea; /* Lighter shade for the title */
+    color: #eaeaea;
   }
   
   .board {
@@ -52,7 +52,7 @@
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
     height: 100px;
-    color: #222; /* Darker text color for the cells */
+    color: #222;
   }
   
   .board div:hover {
@@ -80,7 +80,6 @@
     outline: none;
   }
   
-  /* Responsive Design */
   @media (max-width: 500px) {
     .game-container {
       padding: 25px;
